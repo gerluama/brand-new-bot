@@ -1,7 +1,7 @@
 import telebot
 from telebot import types
 
-bot = telebot.TeleBot('trythistag_bot')
+bot = telebot.TeleBot('8307464344:AAHuaOwBp59OOUHVfX67Zq1yufPdgujWTjE')
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -31,6 +31,7 @@ def get_text_messages(message):
 
     elif message.text == 'Советы по оформлению публикации':
         bot.send_message(message.from_user.id, 'Подробно про советы по оформлению публикаций прочитать по ' + '[ссылке](https://habr.com/ru/docs/companies/design/)', parse_mode='Markdown')
+
 
 
 bot.polling(none_stop=True, interval=0) #обязательная для работы бота часть
